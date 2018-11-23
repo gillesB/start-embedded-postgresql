@@ -1,6 +1,6 @@
 **Note:**
 
-After writing this Maven plugin I found that a similar plugin already exists.
+After writing this Maven plugin I found out that a similar plugin already exists.
 https://gitlab.com/janecekpetr/embedded-postgresql-maven-plugin
 
 It is more versatile and better.
