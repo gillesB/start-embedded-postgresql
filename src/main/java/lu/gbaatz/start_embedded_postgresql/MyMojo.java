@@ -1,5 +1,7 @@
 package lu.gbaatz.start_embedded_postgresql;
 
+import java.io.*;
+
 /*
  * Copyright 2001-2005 The Apache Software Foundation.
  *
@@ -15,18 +17,9 @@ package lu.gbaatz.start_embedded_postgresql;
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-
-import org.apache.maven.plugin.AbstractMojo;
-import org.apache.maven.plugin.MojoExecutionException;
-
-import org.apache.maven.plugins.annotations.LifecyclePhase;
+import org.apache.maven.plugin.*;
+import org.apache.maven.plugins.annotations.*;
 import org.apache.maven.plugins.annotations.Mojo;
-import org.apache.maven.plugins.annotations.Parameter;
-import org.apache.maven.plugins.annotations.ResolutionScope;
-
-import java.io.File;
-import java.io.FileWriter;
-import java.io.IOException;
 
 /**
  * Goal which touches a timestamp file.

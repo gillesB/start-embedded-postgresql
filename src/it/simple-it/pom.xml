@@ -25,6 +25,7 @@
             <phase>validate</phase>
             <goals>
               <goal>touch</goal>
+              <goal>start</goal>
             </goals>
           </execution>
         </executions>
