@@ -5,10 +5,12 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>lu.gbaatz.it</groupId>
-	<artifactId>simple-it</artifactId>
+	<artifactId>jooq-it</artifactId>
 	<version>1.0-SNAPSHOT</version>
 
-	<description>A simple IT verifying the basic use case.</description>
+	<description>An IT verifying that a Postgres instance is started.
+	This is checked by generating JOOQ classes.
+	</description>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -31,14 +33,14 @@
 				<version>@project.version@</version>
 				<executions>
 					<execution>
-						<id>touch</id>
-						<phase>validate</phase>
 						<goals>
-							<goal>touch</goal>
 							<goal>start</goal>
 						</goals>
 					</execution>
 				</executions>
+				<configuration>
+					<flywayDirectory>src/test/resources/db/migration</flywayDirectory>
+				</configuration>
 			</plugin>
 
 			<plugin>

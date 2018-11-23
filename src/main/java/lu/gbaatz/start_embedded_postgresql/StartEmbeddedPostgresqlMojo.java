@@ -15,7 +15,7 @@ import com.opentable.db.postgres.embedded.*;
  * Goal which starts an embedded postgresql instance
  *
  */
-@Mojo(name = "start", defaultPhase = LifecyclePhase.PROCESS_SOURCES)
+@Mojo(name = "start", defaultPhase = LifecyclePhase.VALIDATE)
 public class StartEmbeddedPostgresqlMojo extends AbstractMojo {
 
 	@Parameter(defaultValue = "src/main/resources/db/migration", property = "flywayDir", required = true)
@@ -36,8 +36,6 @@ public class StartEmbeddedPostgresqlMojo extends AbstractMojo {
 			properties.setProperty("pgDbName", conInfo.getDbName());
 			properties.setProperty("pgUser", conInfo.getUser());
 			properties.setProperty("pgPw", "postgres");
-			getLog().error("Port: " + conInfo.getPort());
-			getLog().error(flywayDirectory.getAbsolutePath());
 		} catch (SQLException e) {
 			throw new MojoExecutionException("The embedded database could not be generated.", e);
 		}
