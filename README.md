@@ -1,3 +1,10 @@
+**Note:**
+
+After writing this Maven plugin I found that a similar plugin already exists.
+https://gitlab.com/janecekpetr/embedded-postgresql-maven-plugin
+
+It is more versatile and better.
+
 # Start Embedded PostgreSQL Mojo
 
 A simple [Maven](https://maven.apache.org/) Mojo which creates an embedded [PostgreSQL](https://www.postgresql.org/) database and performs a [Flyway](https://flywaydb.org/) migration on it.
